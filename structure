@@ -1,0 +1,85 @@
+# Structure du projet Scent
+
+```
+scent/
+│
+├── config/
+│   ├── database.php             # Configuration de la connexion à la base de données
+│   └── session.php              # Configuration des sessions
+│
+├── public/                      # Dossier accessible publiquement
+│   ├── index.php                # Point d'entrée de l'application
+│   ├── css/
+│   │   ├── style.css            # Styles principaux
+│   │   ├── product.css          # Styles pour les produits
+│   │   ├── cart.css             # Styles pour le panier
+│   │   └── admin.css            # Styles pour l'interface admin
+│   │
+│   ├── js/
+│   │   ├── main.js              # Scripts principaux
+│   │   ├── product.js           # Scripts pour les produits
+│   │   ├── cart.js              # Scripts pour le panier
+│   │   ├── filters.js           # Scripts pour les filtres de recherche
+│   │   └── admin.js             # Scripts pour l'interface admin
+│   │
+│   └── images/
+│       ├── products/            # Images des parfums
+│       ├── logo.png             # Logo du site
+│       └── banners/             # Bannières et images promotionnelles
+│
+├── app/
+│   ├── models/
+│   │   ├── Product.php          # Modèle pour les parfums
+│   │   ├── User.php             # Modèle pour les utilisateurs
+│   │   ├── Cart.php             # Modèle pour le panier
+│   │   └── Order.php            # Modèle pour les commandes
+│   │
+│   ├── controllers/
+│   │   ├── ProductController.php  # Contrôleur pour les parfums
+│   │   ├── UserController.php     # Contrôleur pour les utilisateurs
+│   │   ├── CartController.php     # Contrôleur pour le panier
+│   │   ├── OrderController.php    # Contrôleur pour les commandes
+│   │   └── AdminController.php    # Contrôleur pour l'admin
+│   │
+│   ├── views/
+│   │   ├── templates/
+│   │   │   ├── header.php         # En-tête du site
+│   │   │   ├── footer.php         # Pied de page du site
+│   │   │   └── navigation.php     # Barre de navigation
+│   │   │
+│   │   ├── home/
+│   │   │   └── index.php          # Page d'accueil
+│   │   │
+│   │   ├── products/
+│   │   │   ├── index.php          # Liste des parfums
+│   │   │   ├── details.php        # Détails d'un parfum
+│   │   │   └── search.php         # Résultats de recherche
+│   │   │
+│   │   ├── user/
+│   │   │   ├── login.php          # Page de connexion
+│   │   │   ├── register.php       # Page d'inscription
+│   │   │   └── profile.php        # Profil utilisateur
+│   │   │
+│   │   ├── cart/
+│   │   │   ├── index.php          # Panier
+│   │   │   └── checkout.php       # Validation de commande
+│   │   │
+│   │   └── admin/
+│   │       ├── index.php          # Tableau de bord admin
+│   │       ├── products.php       # Gestion des parfums
+│   │       ├── add_product.php    # Ajout de parfum
+│   │       └── orders.php         # Gestion des commandes
+│   │
+│   └── helpers/
+│       ├── SessionHelper.php      # Gestion des sessions
+│       ├── CookieHelper.php       # Gestion des cookies
+│       └── ValidationHelper.php   # Validation des données
+│
+├── database/
+│   ├── schema.sql                # Schéma de la base de données
+│   ├── procedures.sql            # Procédures stockées
+│   ├── triggers.sql              # Triggers
+│   └── seed.sql                  # Données initiales
+│
+└── .htaccess                     # Configuration du serveur Apache
+```

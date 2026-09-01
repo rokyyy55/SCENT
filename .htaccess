@@ -1,0 +1,16 @@
+# Activer le module de réécriture
+RewriteEngine On
+
+# Définir la base
+RewriteBase /scent/
+
+# Ne pas appliquer les règles aux fichiers test.php
+RewriteRule ^test\.php$ - [L]
+
+# Ne pas appliquer les règles aux fichiers statiques
+RewriteRule ^public/images/ - [L]
+RewriteRule ^public/css/ - [L]
+RewriteRule ^public/js/ - [L]
+
+# Rediriger tout le reste vers index.php
+RewriteRule ^(.*)$ index.php [L,QSA]
